@@ -10,9 +10,9 @@ export default class Button extends Component {
     render() {
         return (
             <div 
-            className={`button ${this.isOperator(this.props.children) ? "" : "operator"}`}
-            onClick={() => this.props.handleClick(this.props.children)}>
-                {this.props.children}
+            className={`button ${this.isOperator(this.props.name) ? "" : "operator"}`}
+            onClick={() => this.props.handleClick(this.props.name)}>
+                {this.props.name}
             </div>
         )
     }

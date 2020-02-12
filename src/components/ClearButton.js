@@ -6,7 +6,7 @@ export default class ClearButton extends Component {
         return (
             <div className="clear-button"
             onClick={() => this.props.handleClear()}>
-                {this.props.children}
+                {this.props.name}
             </div>
         )
     }

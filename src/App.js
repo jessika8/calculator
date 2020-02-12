@@ -15,13 +15,13 @@ export default class App extends Component {
     operator: ""
   }
 
-  addToInPut = val => {
+  addToInPut = (val) => {
     this.setState({
       input: this.state.input + val
     })
   }
 
-  addDecimal = val => {
+  addDecimal = (val) => {
     // only add decimal if there is no current decimal point present in the input area
     // is not there (-1)
     if (this.state.input.indexOf(".") === -1) {
@@ -29,7 +29,7 @@ export default class App extends Component {
     }
   }
 
-  addZeroToInPut = val => {
+  addZeroToInPut = (val) => {
     // if this.state.input is not empty then add zero
     // is not blank, another number has been added in
     if (this.state.input !== ""){
@@ -103,34 +103,34 @@ export default class App extends Component {
       <div className="App">
         <div className="calc-wrapper">
           <div className="row">
-            <Input>{this.state.input}</Input>
+            <Input value={this.state.input}/>
           </div>
           <div className="row">
-            <Button handleClick={this.addToInPut} >7</Button>
-            <Button handleClick={this.addToInPut}>8</Button>
-            <Button handleClick={this.addToInPut}>9</Button>
-            <Button handleClick={this.divide}>/</Button>
+            <Button handleClick={this.addToInPut} name="7"/>
+            <Button handleClick={this.addToInPut} name="8"/>
+            <Button handleClick={this.addToInPut} name="9"/>
+            <Button handleClick={this.divide} name="/"/>
           </div>
           <div className="row">
-            <Button handleClick={this.addToInPut}>4</Button>
-            <Button handleClick={this.addToInPut}>5</Button>
-            <Button handleClick={this.addToInPut}>6</Button>
-            <Button handleClick={this.multiply}>*</Button>
+            <Button handleClick={this.addToInPut} name="4"/>
+            <Button handleClick={this.addToInPut} name="5"/>
+            <Button handleClick={this.addToInPut} name="6"/>
+            <Button handleClick={this.multiply} name="*"/>
           </div>
           <div className="row">
-            <Button handleClick={this.addToInPut}>1</Button>
-            <Button handleClick={this.addToInPut}>2</Button>
-            <Button handleClick={this.addToInPut}>3</Button>
-            <Button handleClick={this.add}>+</Button>
+            <Button handleClick={this.addToInPut} name="1"/>
+            <Button handleClick={this.addToInPut} name="2" />
+            <Button handleClick={this.addToInPut} name="3"/>
+            <Button handleClick={this.add} name="+"/>
           </div>
           <div className="row">
-            <Button handleClick={this.addDecimal}>.</Button>
-            <Button handleClick={this.addZeroToInPut}>0</Button>
-            <Button handleClick={this.evaluate}>=</Button>
-            <Button handleClick={this.subtract}>-</Button>
+            <Button handleClick={this.addDecimal} name="."/>
+            <Button handleClick={this.addZeroToInPut} name="0"/>
+            <Button handleClick={this.evaluate} name="="/>
+            <Button handleClick={this.subtract} name="-"/>
           </div>
           <div className="row">
-            <ClearButton handleClear={this.clearInput}>Clear</ClearButton>
+            <ClearButton name="Clear" handleClear={this.clearInput}/>
           </div>
         </div>
       </div>
