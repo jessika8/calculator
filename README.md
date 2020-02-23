@@ -1,6 +1,7 @@
 # Calculator
 A basic calculator where you can add, subtract, divide and multiple.
-Hosted on [GitHub]()
+Hosted on [GitHub]( https://jessika8.github.io/calculator/)
+Try it out!
 
 ## Motivation
 I was learnig how to combine logic with React.js
