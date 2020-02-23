@@ -78,19 +78,19 @@ export default class App extends Component {
     // currentnumber is the new number entered
     this.state.currentNumber = this.state.input;
 
-    if (this.state.operator == "plus") {
+    if (this.state.operator === "plus") {
       this.setState({
         input:parseFloat(this.state.previousNumber) + parseFloat(this.state.currentNumber)
       })
-    } else if (this.state.operator == "subtract") {
+    } else if (this.state.operator === "subtract") {
       this.setState({
         input:parseFloat(this.state.previousNumber) - parseFloat(this.state.currentNumber)
       })
-    } else if (this.state.operator == "multiply") {
+    } else if (this.state.operator === "multiply") {
       this.setState({
         input:parseFloat(this.state.previousNumber) * parseFloat(this.state.currentNumber)
       })
-    } else if (this.state.operator == "divide") {
+    } else if (this.state.operator === "divide") {
       this.setState({
         input:parseFloat(this.state.previousNumber) / parseFloat(this.state.currentNumber)
       })
