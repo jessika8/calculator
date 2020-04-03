@@ -14,3 +14,9 @@
   display: flex;
   width: 100%;
 }
+
+@media only screen and (max-width: 450px) {
+  .calc-wrapper {
+    width: 85vw;
+  }
+}
